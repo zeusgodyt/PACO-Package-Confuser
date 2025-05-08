@@ -14,7 +14,7 @@
 ## 📽️ Live Demo
 
 <p align="center">
-  <img src="icons/demo.gif" alt="PACO Live Demo" width="100px">
+  <img src="icons/demo.gif" alt="PACO Live Demo" width="540px">
 </p>
 
 
