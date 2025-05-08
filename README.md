@@ -1,6 +1,10 @@
+<a href="#" target="_blank">
+  <img src="./icons/icon128.png" alt="GitHub Logo" width="50" height="50" />
+</a>
+
 # 🎭 PACO - Package Confuser
 
-> 🕵️‍♂️ A Chrome Extension that scans GitHub repositories to uncover unpublished, broken, or removed packages across major ecosystems.
+🕵️‍♂️ A Chrome Extension that scans GitHub repositories to uncover unpublished, broken, or removed packages across major ecosystems.
 
 ---
 
