@@ -13,10 +13,10 @@
 ---
 ## 📽️ Live Demo
 
-<video width="100%" controls>
-  <source src="icons/demo.mp4" type="video/mp4">
-  Your browser does not support the video tag.
-</video>
+<p align="center">
+  <img src="icons/demo.gif" alt="PACO Live Demo" width="100%">
+</p>
+
 
 ---
 
@@ -71,11 +71,6 @@ Analyze package hygiene in coding assessments or open-source contributions durin
 ### 📈 **Tech Due Diligence**
 
 Assess codebases during M\&A or internal audits for third-party dependency risks.
-
-### Installation
-
-[![View PACO on Product Hunt](./icons/paco-card.png)](https://www.producthunt.com/posts/paco-package-confuser)
-
 
 
 
