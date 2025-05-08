@@ -74,7 +74,7 @@ Assess codebases during M\&A or internal audits for third-party dependency risks
 
 ### Installation
 
-[![PACO on Product Hunt](https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=962953&theme=dark)](https://www.producthunt.com/posts/paco-package-confuser?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-paco-package-confuser)
+[![View PACO on Product Hunt](./icons/paco-card.png)](https://www.producthunt.com/posts/paco-package-confuser)
 
 
 
