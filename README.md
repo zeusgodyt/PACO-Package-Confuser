@@ -75,6 +75,8 @@ Assess codebases during M\&A or internal audits for third-party dependency risks
 ### Installation
 <iframe style="border: none;" src="https://cards.producthunt.com/cards/products/1063195" width="500" height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
+
+
 ## 🔍 Supported Ecosystems
 
 | Ecosystem   | Files Scanned                       | Registry Checked                              |
@@ -159,7 +161,7 @@ paco/
 ```
 
 ---
-
+<a href="https://www.producthunt.com/posts/paco-package-confuser?embed=true&utm_source=badge-featured&utm_medium=badge&utm_souce=badge-paco&#0045;package&#0045;confuser" target="_blank"><img src="https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=962953&theme=dark&t=1746719637755" alt="PACO&#0032;–&#0032;Package&#0032;Confuser - 🧩&#0032;Chrome&#0032;extension&#0032;to&#0032;find&#0032;missing&#0032;NPM&#0032;packages | Product Hunt" style="width: 250px; height: 54px;" width="250" height="54" /></a>
 
 ## 👨‍💻 Authors
 
