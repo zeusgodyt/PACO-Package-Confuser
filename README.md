@@ -73,7 +73,8 @@ Analyze package hygiene in coding assessments or open-source contributions durin
 Assess codebases during M\&A or internal audits for third-party dependency risks.
 
 ### Installation
-<iframe style="border: none;" src="https://cards.producthunt.com/cards/products/1063195" width="500" height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
+[![PACO on Product Hunt](https://api.producthunt.com/widgets/embed-image/v1/featured.svg?post_id=962953&theme=dark)](https://www.producthunt.com/posts/paco-package-confuser?utm_source=badge-featured&utm_medium=badge&utm_souce=badge-paco-package-confuser)
+
 
 
 
