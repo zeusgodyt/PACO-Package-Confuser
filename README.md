@@ -72,7 +72,8 @@ Analyze package hygiene in coding assessments or open-source contributions durin
 
 Assess codebases during M\&A or internal audits for third-party dependency risks.
 
-
+### Installation
+<iframe style="border: none;" src="https://cards.producthunt.com/cards/products/1063195" width="500" height="405" frameborder="0" scrolling="no" allowfullscreen></iframe>
 
 ## 🔍 Supported Ecosystems
 
