@@ -100,3 +100,7 @@ paco/
 ├── popup.js # UI logic & Chrome messaging
 ├── style.css # Clean, responsive UI styling
 ├── icons/ # Extension icon set
+
+## 📘 Attribution
+
+GitHub logo used under fair use as per [GitHub Brand Guidelines](https://github.com/logos). This project is not affiliated with or endorsed by GitHub.
