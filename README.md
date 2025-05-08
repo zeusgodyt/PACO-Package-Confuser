@@ -99,14 +99,14 @@ This helps developers, security teams, and recruiters quickly assess the reliabi
 
 ## 📁 Project Structure
 
-paco/
-├── manifest.json # Chrome Extension configuration
-├── background.js # Handles API checks, queues, concurrency
-├── content.js # Extracts GitHub links & raw file URLs
-├── popup.html # Extension UI
-├── popup.js # UI logic & Chrome messaging
-├── style.css # Clean, responsive UI styling
-├── icons/ # Extension icon set
+- `paco/`
+  - `manifest.json` – Chrome Extension configuration
+  - `background.js` – Handles API checks, queues, concurrency
+  - `content.js` – Extracts GitHub links & raw file URLs
+  - `popup.html` – Extension UI
+  - `popup.js` – UI logic & Chrome messaging
+  - `style.css` – Clean, responsive UI styling
+  - `icons/` – Extension icon set (includes `icon128.png`, etc.)
 
 ## 📘 Attribution
 
