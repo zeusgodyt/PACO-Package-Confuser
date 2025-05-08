@@ -1,6 +1,9 @@
-<a href="#" target="_blank">
-  <img src="./icons/icon128.png" alt="GitHub Logo" width="50" height="50" />
-</a>
+<p align="center">
+  <a href="#" target="_blank">
+    <img src="./icons/icon128.png" alt="GitHub Logo" width="150" height="150" />
+  </a>
+</p>
+
 
 # 🎭 PACO - Package Confuser
 
