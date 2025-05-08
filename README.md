@@ -1,70 +1,109 @@
 <p align="center">
   <a href="#" target="_blank">
-    <img src="./icons/icon128.png" alt="GitHub Logo" width="150" height="150" />
+    <img src="./icons/icon128.png" alt="PACO Logo" width="150" height="150" />
   </a>
 </p>
 
+<h1 align="center">🎭 PACO - Package Confuser</h1>
 
-# 🎭 PACO - Package Confuser
-
-🕵️‍♂️ A Chrome Extension that scans GitHub repositories to uncover unpublished, broken, or removed packages across major ecosystems.
-
----
-
-## 🚀 Overview
-
-**PACO (Package Confuser)** is a browser-based dependency auditing tool built as a Chrome extension. It inspects package manager files found across GitHub repositories (including search result pages) and checks if any dependencies are:
-
-- 🔴 Unpublished
-- ⚠️ Removed
-- ❌ Not found on public registries
-
-This helps developers, security teams, and recruiters quickly assess the reliability of open-source software by flagging dependencies that might be risky, broken, or suspicious.
+<p align="center">
+🕵️‍♂️ Chrome Extension to uncover unpublished, removed, or broken packages in GitHub repositories across major ecosystems.
+</p>
 
 ---
 
-## 🎯 Use Cases
+## 🚀 What is PACO?
+
+**PACO (Package Confuser)** is a lightweight Chrome extension designed to help developers and security researchers uncover potential dependency confusion issues by scanning public GitHub repositories. It detects packages that are:
+
+* 🔴 **Unpublished**
+* ⚠️ **Removed**
+* ❌ **Nonexistent** on public registries
+
+With a simple click, PACO parses project files like `package.json`, `requirements.txt`, `pom.xml`, and more, checking each dependency against the official package registries in real-time.
+
+---
+
+## ❓ What is Dependency Confusion?
+
+**Dependency Confusion**, also known as **Substitution Attack**, is a software supply-chain vulnerability where an attacker registers a malicious package on a public registry using the **same name as a private/internal dependency** used within an organization. If a build system prioritizes public packages over internal ones, it may inadvertently pull the attacker’s malicious package instead of the intended internal version.
+
+### 🔥 Real-World Example
+
+In 2021, security researcher Alex Birsan exploited this issue across major tech companies (Apple, Microsoft, PayPal, etc.) by uploading intentionally named packages to public registries like npm, PyPI, and RubyGems—triggering automatic installs in their internal pipelines.
+
+> This vulnerability can lead to **remote code execution**, **data exfiltration**, and **supply-chain compromise** if not mitigated properly.
+
+**PACO** helps identify packages in public repos that:
+
+* May not exist on public registries (hinting at private/internal use)
+* Were published but later removed (possible signs of abuse)
+* Could be exploited for name squatting or dependency hijacking
+
+---
+
+## 🎯 Why Use PACO?
 
 ### 🔐 **Security Auditing**
-- Detect if dependencies have been removed or unpublished (often a red flag for supply-chain attacks).
 
-### 🧑‍💻 **Open-Source Review**
-- Quickly check if repositories use valid, public, and stable dependencies before using them in your stack.
+Unpublished or removed dependencies are often indicators of supply-chain attacks. PACO helps you identify such threats effortlessly.
 
-### ⚙️ **DevOps QA**
-- Prevent broken builds by identifying missing dependencies before deployment.
+### 🧑‍💻 **Open-Source Project Review**
 
-### 🕵️‍♀️ **Hiring/Recruitment**
-- Evaluate candidates' projects by scanning for package hygiene and maintenance.
+Before forking or using any public repository, ensure its dependencies are valid and actively maintained.
+
+### ⚙️ **DevOps & QA**
+
+Detect broken or missing packages early, avoiding CI/CD failures and deployment issues.
+
+### 🕵️‍♀️ **Recruitment / Code Review**
+
+Analyze package hygiene in coding assessments or open-source contributions during hiring processes.
 
 ### 📈 **Tech Due Diligence**
-- Validate code dependencies in public projects for compliance and risk management.
+
+Assess codebases during M\&A or internal audits for third-party dependency risks.
+
+
+
+## 🔍 Supported Ecosystems
+
+| Ecosystem   | Files Scanned                       | Registry Checked                              |
+| ----------- | ----------------------------------- | --------------------------------------------- |
+| **Node.js** | `package.json`, `package-lock.json` | [npmjs.org](https://registry.npmjs.org/)      |
+| **Python**  | `requirements.txt`, `setup.py`      | [pypi.org](https://pypi.org/)                 |
+| **Ruby**    | `Gemfile`, `Gemfile.lock`           | [rubygems.org](https://rubygems.org/)         |
+| **Java**    | `pom.xml`                           | [search.maven.org](https://search.maven.org/) |
+
+> *More ecosystems coming soon (e.g., Go Modules, Cargo, NuGet)!*
 
 ---
 
-## 🔍 Supported Package Managers
+## 🧠 How It Works
 
-| Ecosystem    | File Type             | Registry Checked                              |
-|--------------|------------------------|-----------------------------------------------|
-| **Node.js**  | `package.json`         | [npmjs.org](https://registry.npmjs.org/)      |
-| **Python**   | `requirements.txt`     | [pypi.org](https://pypi.org/)                 |
-| **Ruby**     | `Gemfile`, `Gemfile.lock` | [rubygems.org](https://rubygems.org/)     |
-| **Java**     | `pom.xml`              | [search.maven.org](https://search.maven.org/) |
+1. **Parse Files**: Scans GitHub pages for package files or links to raw files.
+2. **Extract Dependencies**: Uses regular expressions to parse known formats.
+3. **Check Registries**: Validates each dependency name against its respective registry.
+4. **Classify Status**:
+
+   * ✅ **Found** – Safe
+   * ❌ **Not Found** – Possibly typo, removed, or never published
+   * 🔴 **Unpublished** – Removed from the registry
+5. **Show Results**: Displays scan results in the extension popup, with filters and download support.
 
 ---
 
 ## 🛠 Tech Stack
 
-| Layer              | Tech Used                                |
-|--------------------|-------------------------------------------|
-| **Platform**        | Chrome Extension (Manifest V3)            |
-| **Frontend UI**     | HTML, CSS, Vanilla JavaScript             |
-| **Logic & Parser**  | `fetch`, `async/await`, RegEx extraction  |
-| **Background Tasks**| Service worker + message passing          |
-| **Concurrency**     | Custom batch queuing engine               |
+| Layer             | Tech Used                                |
+| ----------------- | ---------------------------------------- |
+| **Platform**      | Chrome Extension (Manifest V3)           |
+| **Frontend**      | HTML, CSS, Vanilla JavaScript            |
+| **Backend Logic** | Fetch API, async/await, RegEx            |
+| **Concurrency**   | Custom batch queue with smart throttling |
+| **Messaging**     | Chrome runtime message passing           |
 
 ---
-
 ## 💡 Key Features
 
 - ✅ **Deep GitHub Search Integration**
@@ -86,28 +125,43 @@ This helps developers, security teams, and recruiters quickly assess the reliabi
 
 ---
 
-## 📦 Installation
+## 📦 Installation Guide
 
-1. Clone or download this repository
+1. **Clone or download this repo**
 2. Go to `chrome://extensions/`
 3. Enable **Developer Mode**
-4. Click **Load unpacked** and select the folder
-5. Open any GitHub repo or search page with package manager files
-6. Click the PACO extension icon → Hit **“Start Scan”**
+4. Click **Load unpacked** and select the repo folder
+5. Navigate to any GitHub repo or search results page
+6. Click the PACO icon → Press **“Start Scan”**
 
 ---
 
-## 📁 Project Structure
+## 🗂 Project Structure
 
-- `paco/`
-  - `manifest.json` – Chrome Extension configuration
-  - `background.js` – Handles API checks, queues, concurrency
-  - `content.js` – Extracts GitHub links & raw file URLs
-  - `popup.html` – Extension UI
-  - `popup.js` – UI logic & Chrome messaging
-  - `style.css` – Clean, responsive UI styling
-  - `icons/` – Extension icon set (includes `icon128.png`, etc.)
+```
+paco/
+├── background.js      # Handles fetch requests and queues
+├── content.js         # Scans GitHub pages for package links
+├── manifest.json      # Chrome extension config (Manifest V3)
+├── popup.html         # Extension popup UI
+├── popup.js           # Popup logic and messaging
+├── style.css          # UI styling
+├── icons/             # Icon assets (128x128, etc.)
+```
+
+---
+
+
+## 👨‍💻 Authors
+
+* **Anurag Kumar** – [@zeusgodyt](https://github.com/zeusgodyt)
+* **Sidhanta Palei** – [@r00tSid](https://github.com/r00tSid)
+
+---
 
 ## 📘 Attribution
 
-GitHub logo used under fair use as per [GitHub Brand Guidelines](https://github.com/logos). This project is not affiliated with or endorsed by GitHub.
+* GitHub logo used under fair use ([GitHub Brand Guidelines](https://github.com/logos)).
+* This extension is **not affiliated with or endorsed by GitHub**.
+
+---
