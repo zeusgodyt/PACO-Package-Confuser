@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GitHub Package Checker</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h2>🔍 Package Confuser 🔍</h2>
+        <p>Find unpublished & missing dependencies</p>
+
+        <!-- File Type Selection -->
+        <div class="checkbox-group">
+            <label class="checkbox-label"><input type="checkbox" id="npm" checked> NPM (package.json)</label>
+            <label class="checkbox-label"><input type="checkbox" id="ruby"> RubyGems (Gemfile*)</label>
+            <label class="checkbox-label"><input type="checkbox" id="python"> PyPI (requirements.txt)</label>
+            <label class="checkbox-label"><input type="checkbox" id="maven"> Maven (pom.xml)</label>
+        </div>
+
+        <button id="scan-btn">🚀 Start Scan</button>
+
+        <!-- Progress Status -->
+        <div id="progress-container">
+            <p id="scan-status">Click to start scan...</p>
+            <progress id="progress-bar" value="0" max="100"></progress>
+        </div>
+
+        <!-- Scan Results -->
+        <div id="file-list">
+            <p>📦 Confused packages will appear here...</p>
+        </div>
+    </div>
+
+    <script src="popup.js"></script>
+</body>
+</html>
