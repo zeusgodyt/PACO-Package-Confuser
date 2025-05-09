@@ -15,7 +15,7 @@
 </p>
 
 ---
-## Tested By - * **Sidhanta Palei** – [Click to Check Linkedin Proofs](https://www.linkedin.com/posts/sidhanta-palei-58791323b_cybersecurity-opensource-browserextensions-activity-7326265250578616320-COb6?utm_source=share&utm_medium=member_android&rcm=ACoAAD8AocQBpSRpmmF7i9dBqZX3NcBEI7W-3gI)
+## Tested By - **Sidhanta Palei** – [Click to Check Linkedin Proofs](https://www.linkedin.com/posts/sidhanta-palei-58791323b_cybersecurity-opensource-browserextensions-activity-7326265250578616320-COb6?utm_source=share&utm_medium=member_android&rcm=ACoAAD8AocQBpSRpmmF7i9dBqZX3NcBEI7W-3gI)
 
 
 ## 📽️ Live Demo
