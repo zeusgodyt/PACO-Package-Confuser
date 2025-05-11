@@ -26,6 +26,39 @@
 
 
 ---
+## 🛠 Load in Chrome
+
+1. Open **Google Chrome**
+2. Navigate to: `chrome://extensions/`
+3. In the top-right corner, enable **Developer mode**
+4. Click on **Load unpacked**
+5. In the file dialog, select the extracted folder that contains the `manifest.json` file (from the PACO project)
+6. The extension will be added to your browser and appear in the extensions bar
+
+---
+
+## 🎯 How to Use PACO
+
+1. Visit any **public GitHub repository** or **GitHub search result page**
+2. Click the **PACO icon** in the Chrome extensions bar
+3. Press the **"Start Scan"** button
+4. PACO will automatically:
+   - Detect the supported dependency files in the repository (like `package.json`, `requirements.txt`, `pom.xml`, etc.)
+   - Query the corresponding package registries
+   - Identify if packages are:
+     - ✅ **Available**
+     - ❌ **Not found**
+     - 🔴 **Unpublished or removed**
+
+---
+
+> 🧪 *Note: Java - pom.xml is not working properly,will update soon*
+
+---
+
+## ✅ You're All Set!
+
+---
 
 ## 🚀 What is PACO?
 
@@ -137,17 +170,6 @@ Assess codebases during M\&A or internal audits for third-party dependency risks
   - Checkbox toggles, scrollable results, one-click scan
 - 🔐 **Zero Tracking**
   - All data stays in your browser. No accounts, no data collection.
-
----
-
-## 📦 Installation Guide
-
-1. **Clone or download this repo**
-2. Go to `chrome://extensions/`
-3. Enable **Developer Mode**
-4. Click **Load unpacked** and select the repo folder
-5. Navigate to any GitHub repo or search results page
-6. Click the PACO icon → Press **“Start Scan”**
 
 ---
 
